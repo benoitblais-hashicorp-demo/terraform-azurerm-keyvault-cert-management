@@ -1,16 +1,20 @@
 variable "key_vault_name" {
-  type = string
+  description = "(Required) Name of the Key Vault created by the test fixture."
+  type        = string
 }
 
 variable "location" {
-  type = string
+  description = "(Required) Azure location used by the test fixture resources."
+  type        = string
 }
 
 variable "resource_group_name" {
-  type = string
+  description = "(Required) Name of the resource group created by the test fixture."
+  type        = string
 }
 
 variable "certificate_contacts" {
+  description = "(Optional) Certificate contacts configuration passed through to the module under test."
   type = object({
     contacts = optional(list(object({
       email = string
@@ -28,6 +32,7 @@ variable "certificate_contacts" {
 }
 
 variable "certificate_issuers" {
+  description = "(Optional) Certificate issuer definitions passed through to the module under test."
   type = list(object({
     name          = string
     provider_name = string
@@ -51,6 +56,7 @@ variable "certificate_issuers" {
 }
 
 variable "certificates" {
+  description = "(Optional) Certificate definitions passed through to the module under test."
   type = list(object({
     name = string
     certificate = optional(object({

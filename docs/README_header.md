@@ -65,9 +65,9 @@ Use Managed Identity when Terraform runs on Azure-hosted compute (for example, A
 
 Documentation:
 
-- https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure
-- https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret
-- https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/managed_service_identity
+- [AzureRM provider authentication](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure)
+- [Service Principal with client secret](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret)
+- [Managed Service Identity](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/managed_service_identity)
 
 ## Features
 

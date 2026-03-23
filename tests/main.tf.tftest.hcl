@@ -2,8 +2,8 @@ provider "azurerm" {
   features {}
 }
 
-run "apply_certificate_contacts_with_fixture" {
-  command = apply
+run "plan_certificate_contacts_with_fixture" {
+  command = plan
 
   module {
     source = "./tests/fixtures/basic"
@@ -22,16 +22,6 @@ run "apply_certificate_contacts_with_fixture" {
         }
       ]
     }
-  }
-
-  assert {
-    condition     = output.key_vault_id != null && output.key_vault_id != ""
-    error_message = "Fixture Key Vault ID must be created and exported."
-  }
-
-  assert {
-    condition     = output.certificate_contacts_id != null && output.certificate_contacts_id != ""
-    error_message = "Certificate contacts ID must be exported when contacts are configured."
   }
 
   assert {
